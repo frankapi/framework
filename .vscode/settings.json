@@ -1,0 +1,7 @@
+{
+    "php.suggest.basic": false,
+    "php.debug.executablePath": "F:\\Codex\\FrankApi\\framework\\php.bat",
+    "php.validate.executablePath": "F:\\Codex\\FrankApi\\framework\\php.bat",
+    "php.validate.run": "onSave",
+    "php.validate.enable": true
+}

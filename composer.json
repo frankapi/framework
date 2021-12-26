@@ -1,0 +1,23 @@
+{
+    "name": "frankapi/framework",
+    "description": "The FrankApi framework",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Frankapi\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Francisco Barrento",
+            "email": "francisco.barrento@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+        "psr/http-message": "^1.0"
+    }
+}

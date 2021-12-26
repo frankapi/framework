@@ -1,0 +1,59 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Listen for XDebug on Docker",
+            "type": "php",
+            "request": "launch",
+            "port": 9003,
+            "log" : true,
+            "stopOnEntry": false,
+            "pathMappings": {
+                "/srv/api": "${workspaceFolder}"
+            },
+            "ignore": [
+                "**/vendor/**/*"
+            ]            
+        },
+
+        {
+            "name": "Run PHPUnit Tests",
+            "type": "php",
+            "request": "launch",
+            "port": 9003,
+            "runtimeArgs": [
+                "--rm",
+                "frankapi",
+                "./vendor/bin/phpunit"
+            ],
+            "pathMappings": {
+                "/srv/api": "${workspaceFolder}"
+            },
+            "program": "",
+            "cwd": "${workspaceRoot}",
+        },
+
+        {
+            "name": "Run Built-In PHP Server",
+            "type": "php",
+            "request": "launch",
+            "runtimeArgs": [
+                "--rm",
+                "-p",
+                "4000:4000",
+                "frankapi",
+                "-S",
+                "0.0.0.0:4000",
+                "-t",
+                "."
+            ],
+            "program": "",
+            "cwd": "${workspaceRoot}",
+        },
+
+    ]
+}

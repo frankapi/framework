@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  frankapi:
+    container_name: frankapi
+    image: frankapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+     - ./:/srv/api
+     - ./docker/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+    working_dir: /srv/api
+    command: >
+      sh -c "php -S 0.0.0.0:80"
